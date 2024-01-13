@@ -1,20 +1,32 @@
 package ru.job4j.java_core;
 
 public class Run {
+    private DayOfWeek dayOfWeek;
+
+    public DayOfWeek TimeOfYear(int month) {
+            if (month == 1 || month == 2 || month == 3) {
+                dayOfWeek = DayOfWeek.Winter;
+            }
+            if (month == 4 || month == 5 || month == 6) {
+                dayOfWeek = DayOfWeek.Autumn;
+            }
+            if (month == 7 || month == 8 || month == 9) {
+                dayOfWeek = DayOfWeek.Summer;
+            }
+            if (month == 10 || month == 11 || month == 12) {
+                dayOfWeek = DayOfWeek.Spring;
+        }
+        return dayOfWeek;
+    }
+
     public static void main(String[] args) {
-        String ln = System.lineSeparator();
-        int i = 1;
-        long l = 100;
-        float f = 140.14f;
-        double d = 1231.4D;
-        byte b = 7;
-        String s = "St";
-        char c = 'c';
-        boolean rsl = false;
-        var v = (byte) 127;
-        byte varByte = 16;
-        short varShort = varByte;
-        final int month = 9;
-        System.out.println("varByte = " + varByte + ln + "varShort = " + varShort + ln + "Месяц: " + month);
+        Container container = new Container();
+        Container container1 = new Container();
+        container1.setObject("А тут где то");
+        System.out.println("Объект равен: " + container.getObject());
+        container.setObject("Что-то");
+        System.out.println("Объект равен: " + container.getObject() + " Объект 2 = " + container1.getObject());
+        container.setObject(123);
+        System.out.println("Объект равен: " + container.getObject());
     }
 }
