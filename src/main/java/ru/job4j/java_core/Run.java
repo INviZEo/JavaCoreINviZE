@@ -1,19 +1,12 @@
 package ru.job4j.java_core;
 
-public class Run {
+import java.util.Scanner;
 
+public class Run {
     public static void main(String[] args) {
         int a = 4;
-        int c = 3;
-        byte b = 5;
-        b++;
-        c = 5;
-        a = 7;
-        System.out.println(b);
-        System.out.println(a + c);
-        System.out.println(a - c);
-        System.out.println(a * c);
-        System.out.println(a / c);
-        System.out.println(a % c);
+        System.out.println(Math.sqrt(7));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(Math.sqrt(Math.pow(scanner.nextInt(), 2) + Math.pow(scanner.nextInt(), 2)));
     }
 }
