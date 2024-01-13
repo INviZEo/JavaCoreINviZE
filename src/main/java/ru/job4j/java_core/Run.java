@@ -4,9 +4,14 @@ import java.util.Scanner;
 
 public class Run {
     public static void main(String[] args) {
-        int a = 4;
-        System.out.println(Math.sqrt(7));
         Scanner scanner = new Scanner(System.in);
-        System.out.println(Math.sqrt(Math.pow(scanner.nextInt(), 2) + Math.pow(scanner.nextInt(), 2)));
+        double a = scanner.nextDouble();
+        double b = scanner.nextDouble();
+        double c = scanner.nextDouble();
+        double s = (a + b + c ) / 2;
+        double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        double heightA = 2 * area / a;
+        System.out.println(heightA);
+
     }
 }
