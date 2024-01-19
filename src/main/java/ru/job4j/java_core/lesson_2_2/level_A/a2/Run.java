@@ -5,28 +5,21 @@ import java.util.Scanner;
 public class Run {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            if (scanner.hasNextInt()) {
-                if (scanner.nextInt() == 1) {
-                    System.out.println("Понедельник");
-                } else if (scanner.nextInt() == 2) {
-                    System.out.println("Вторник");
-                } else if (scanner.nextInt() == 3) {
-                    System.out.println("Среда");
-                } else if (scanner.nextInt() == 4) {
-                    System.out.println("Четверг");
-                } else if (scanner.nextInt() == 5) {
-                    System.out.println("Пятница");
-                } else if (scanner.nextInt() == 6) {
-                    System.out.println("Суббота");
-                } else if (scanner.nextInt() == 7) {
-                    System.out.println("Воскресенье");
-                } else {
-                    if (scanner.nextLine().equals("stop")) {
-                        break;
-                    }
-                }
-            }
+        int i = scanner.nextInt();
+        if (i == 1) {
+            System.out.println("Понедельник");
+        } else if (i == 2) {
+            System.out.println("Вторник");
+        } else if (i == 3) {
+            System.out.println("Среда");
+        } else if (i == 4) {
+            System.out.println("Четверг");
+        } else if (i == 5) {
+            System.out.println("Пятница");
+        } else if (i == 6) {
+            System.out.println("Суббота");
+        } else if (i == 7) {
+            System.out.println("Воскресенье");
         }
     }
 }
